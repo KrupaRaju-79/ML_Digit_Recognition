@@ -180,7 +180,6 @@ def enhanced_predict(image_path):
     
     image = Image.open(image_path)
     processed_array = enhanced_preprocess(image, input_type="raw")
-    
     prediction = model.predict(processed_array)
     predicted_digit = np.argmax(prediction)
     confidence = np.max(prediction)
